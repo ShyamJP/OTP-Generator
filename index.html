@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSWORD GENERATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center><h1>Capcha Generator</h1></center>
+    <div id="container">
+        
+        <h1 id="op"></h1>
+        <br>
+        <!-- <input type="number" onchange="random_string(this.value)" onkeyup="random_string(this.value)" id="number"> -->
+        <!-- <br> -->
+        <!-- <input type="text" class="num"> -->
+        <br>
+        <button id="btn" onclick="random_string(4)">Generate new Capcha</button>
+
+    </div>
+</body>
+
+<script>
+    // random_string(10);
+    let op = document.querySelector("#op");
+    let s = document.getElementsByClassName('num');
+    // let num = document.querySelector("#btn");
+    console.log(s.value);
+    function random_string(sl)
+    {
+        // let string = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*";
+        let string = "0123456789";
+        
+        let sop = "";
+        for(let i=0;i<=sl-1;i++)
+        {
+        sop += string.charAt(Math.floor(Math.random() * string.length));
+        }
+        op.innerHTML = sop;
+    }
+
+    // let x = op.value;
+    // num.addEventListener('click',randombutton(x));
+
+    // function randombutton(a)
+    // {
+    //     let string = "abcde0123fghijklmnopqrstuvwxyz456ABCDEFGHIJKL789MNOPQRSTUVWXYZ";
+    //     let sop = "";
+    //     for(let i=0;i<a;i++)
+    //     {
+    //     sop += string.charAt(Math.floor(Math.random() * a));
+    //     }
+    //     // op.innerHTML = sop;
+    //     console.log(sop);
+    // }
+</script>
+</html>
